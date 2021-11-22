@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Obróbka Zdjęć | Dogepiesio</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        if ($(window).width() < 994) {
+            window.location = "mobile/index-mobile.html";
+        }
+    </script>
+
+    <header>
+        <a href="#" class="logo">Obróbka Dogepiesio</a>
+
+        <ul>
+            <li>
+                <a href="../index.html">Strona Główna</a>
+                <a href="o_mnie.html">O Mnie</a>
+                <a href="kontakt.html">Kontakt</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="banner"></section>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
