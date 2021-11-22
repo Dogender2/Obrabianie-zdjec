@@ -9,7 +9,7 @@
 
 body{
     background-color: #000000;
-    min-height: 200vh;
+    min-height: 30000px;
 }
 
 header{
@@ -83,10 +83,44 @@ header ul li a{
 }
 
 .opis_banner{
-    
+    margin-right: 50%;
+    margin-left: 10%;
+    background-color: rgba(0, 0, 0, 0.548);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 2vh;
+    text-align: center;
 }
 
 header.sticky .logo,
 header.sticky ul li a{
     color: #000;
+}
+
+.text{
+    background-color: #fff;
+    border-radius: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.text h3{
+    font-size: 25px;
+    background-color: #fff;
+    color: #000;
+    margin-left: 5%;
+    margin-right: 5%;
+    transition: 0.6s;
+    text-align: center;
+}
+
+.images{
+    background-color: #fff;
+    border-radius: 20px;
+    margin-left: 10%;
+}
+
+.images img{
+    height: 500px;
+    border-radius: 20px;
 }
