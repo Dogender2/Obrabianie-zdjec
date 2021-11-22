@@ -9,7 +9,6 @@
 
 body{
     background-color: #000000;
-    min-height: 30000px;
 }
 
 header{
@@ -72,22 +71,22 @@ header ul li a{
     background-size: cover;
 }
 
-.title_banner{
-    margin-right: 50%;
-    margin-left: 10%;
-    background-color: rgba(0, 0, 0, 0.548);
+.kontakt{
+    background-color: #fff;
     border-radius: 20px;
-    color: #fff;
+    margin-right: 40%;
+    margin-left: 10%;
+    color: #000;
+}
+
+.title_banner{
+    border-radius: 20px;
     font-size: 5vh;
     text-align: center;
 }
 
 .opis_banner{
-    margin-right: 50%;
-    margin-left: 10%;
-    background-color: rgba(0, 0, 0, 0.548);
     border-radius: 20px;
-    color: #fff;
     font-size: 2vh;
     text-align: center;
 }
@@ -106,7 +105,6 @@ header.sticky ul li a{
 
 .text h3{
     font-size: 25px;
-    background-color: #fff;
     color: #000;
     margin-left: 5%;
     margin-right: 5%;
@@ -114,13 +112,226 @@ header.sticky ul li a{
     text-align: center;
 }
 
-.images{
-    background-color: #fff;
+.images_false{
     border-radius: 20px;
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-right: 58.8%;
+    margin-top: -45px;
 }
 
-.images img{
+.images_false img{
     height: 500px;
     border-radius: 20px;
+    margin-top: -35px;
+}
+
+.images_false h2{
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.images_true{
+    border-radius: 20px;
+    margin-left: 56%;
+    margin-right: 17.8%;
+    margin-top: -435px;
+}
+
+.images_true img{
+    height: 500px;
+    border-radius: 20px;
+    margin-top: -35px;
+}
+
+.images_true h2{
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+    
+::-webkit-scrollbar-track {
+    background: rgb(5, 5, 5);
+}
+     
+::-webkit-scrollbar-thumb {
+    background: rgb(27, 27, 27);
+    border-radius: 12px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(34, 34, 34); 
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
+
+.info2{
+    background-color: #fff;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 500px;
+}
+
+.opis{
+    font-size: 16px;
+    text-align: left;
+    display: flex;
+}
+
+.opis h2{
+    margin: 30px 30px 30px 30px;
+}
+
+.opis img{
+    height: 300px;
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+.tytul{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.tytul h1{
+    font-size: 35px
+}
+
+@media only screen and (max-width: 1085px) {
+    .opis{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1192px) {
+    .info2{
+        margin-right: 150px;
+    }
+}
+
+@media only screen and (max-width: 1560px) {
+    .text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .images_false{
+        border-radius: 20px;
+        margin-left: 5%;
+        margin-top: 20px;
+        margin-right: 862px;
+    }
+    
+    .images_false img{
+        height: 500px;
+        border-radius: 20px;
+        margin-top: -35px;
+    }
+    
+    .images_false h2{
+        background-color: #fff;
+        border-radius: 20px;
+        text-align: center;
+    }
+    
+    .images_true{
+        border-radius: 20px;
+        margin-left: 56%;
+        margin-right: 17.8%;
+    }
+    
+    .images_true img{
+        height: 500px;
+        border-radius: 20px;
+        margin-top: -35px;
+    }
+    
+    .images_true h2{
+        background-color: #fff;
+        border-radius: 20px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1153px) {
+    .images_false{
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-right: 45%
+    }
+
+    .images_true{
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-right: 45%
+    }
+}
+
+@media only screen and (max-width: 1165px) {
+    .kontakt{
+        background-color: #fff;
+        border-radius: 20px;
+        margin-right: 20%;
+        margin-left: 10%;
+        color: #000;
+    }
+    
+    .title_banner{
+        border-radius: 20px;
+        font-size: 5vh;
+        text-align: center;
+    }
+    
+    .opis_banner{
+        border-radius: 20px;
+        font-size: 2vh;
+        text-align: center;
+    }
 }

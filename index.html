@@ -18,6 +18,9 @@
         }
     </script>
 
+
+
+
     <header>
         <a href="#" class="logo">Obróbka Dogepiesio</a>
 
@@ -30,28 +33,79 @@
         </ul>
     </header>
 
-    <section class="banner"></section>
+    <section class="banner">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-    <div class="info1">
-        <div class="text">
-            <h3>
-                Na pewno posioadasz jakieś ulubione zdjęcie.
-                Czy jest na nim coś co doprowadza cię do szłu?
-                Jeśli tak to spokojnie możesz do mnie się z tym zgłosić.
-                Ja z chęcią ci pomogę z problemem na zdjęciu.
-            </h3>
-        </div>
+        <div class="info1">
+            <div class="text">
+                <h3>
+                    Na pewno posioadasz jakieś ulubione zdjęcie.
+                    Jednak nie podobają ci się kolory na zdjęciu oraz styl jego wykonania.
+                    Jeśli tak to spokojnie możesz do mnie się z tym zgłosić.
+                    Ja z chęcią ci pomogę dobrać kolory w zdjęciu oraz dodać blur.<br />
+                    &#8203
+                </h3>
+            </div>
 
-        <div class="images">
-            <img src="images/184720107_440300610633167_7309266383800536551_n.jpg">
+            <div class="images_false">
+                <h2>
+                    Zwykłe<br />
+                    &#8203
+                </h2>
+                <img src="images/184720107_440300610633167_7309266383800536551_n.jpg">
+            </div>
+            <div class="images_true">
+                <h2>
+                    Przerobione<br />
+                    &#8203
+                </h2>
+                <img src="images/horse.png">
+            </div>
         </div>
+    </section>
+
+    <!--Loading screen na początku-->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
     </div>
 
+
+
+    
     <script type="text/javascript">
         window.addEventListener("scroll", function(){
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         })
+
+        //Load
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+
+        //Autoscroll
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
     </script>
 </body>
 </html>
