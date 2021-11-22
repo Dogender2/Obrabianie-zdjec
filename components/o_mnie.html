@@ -64,11 +64,21 @@
         </div>
     </section>
 
+    <!--Loading screen na początku-->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    
     <script type="text/javascript">
         window.addEventListener("scroll", function(){
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         })
+
+        //Load
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
     </script>
 </body>
 </html>

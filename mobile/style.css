@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #000000;
+}
+  
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  height: 500px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: rgb(12, 12, 12);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.active {
+  background-color: #000;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+    
+::-webkit-scrollbar-track {
+    background: rgb(5, 5, 5);
+}
+     
+::-webkit-scrollbar-thumb {
+    background: rgb(27, 27, 27);
+    border-radius: 12px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(34, 34, 34); 
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
+
+.text123{
+    background-color: #fff;
+    color: #000;
+    margin: 40px 10px 10px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#myLinks{
+    background-color: #111;
+}
+
+.zdjecia123{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.zdjecia123 h3{
+    color: #000;
+    text-align: center;
+}
+
+.zdjecia123 img{
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
