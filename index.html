@@ -33,7 +33,7 @@
 
 
     <header>
-        <a href="#" class="logo">Obróbka Dogepiesio</a>
+        <a onclick="counter()" href="#" class="logo">Obróbka Dogepiesio</a>
 
         <ul>
             <li>
@@ -43,6 +43,28 @@
             </li>
         </ul>
     </header>
+
+    <script>
+        var clicks = 0;
+        
+        function counter(){
+            clicks += 1;
+            if(clicks === 10)
+            {
+                alert("Po co tak to klikasz?");
+            }
+
+            if(clicks === 20)
+            {
+                alert("??? Po co tak klikać?")
+            }
+
+            if(clicks === 30){
+                alert("Po co niszczysz myszkę?")
+                clicks = 0;
+            }
+        }
+    </script>
 
     <section class="banner">
         <br />
