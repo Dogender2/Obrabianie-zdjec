@@ -8,29 +8,36 @@
 
     <link rel="stylesheet" href="../style.css">
 
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <link rel="icon" href="../images/icon.png">
-    
+
     <!--Preview-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dogender2.github.io/Obrabianie-zdjec/index.html">
     <meta property="og:title" content="Obróbka Zdjęć | Dogepiesio">
     <meta property="og:description" content="Strona internetowa dotycząca obróbek zdjęć w photoshopie">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/912769582610141254/912769644174135366/kontakt_pc.png">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/912769582610141254/912769645533098074/home_pc.png">
     <meta property=”og:locale” content=”pl_PL” />
     <meta property="og:site_name" content="Dogepiesio | Obróbka">
 </head>
 
 <body>
+
+    
     <div class="wrapper">
 
 
     <script type="text/javascript">
         if ($(window).width() < 994) {
-            window.location = "../mobile/kontakt.html";
+            window.location = "../mobile/komentarze.html";
         }
     </script>
+
+
+
 
     <header>
         <a onclick="counter()" href="#" class="logo">Obróbka Dogepiesio</a>
@@ -121,7 +128,6 @@
             $(".wrapper").css("top", "100%");
             $(".wrapper").css("left", "100%");
         }
-
     </script>
 
     <section class="banner">
@@ -132,25 +138,55 @@
         <br />
         <br />
         <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-        <div class="kontakt">
-            <div class="title_banner">
-                <h1>Chcesz się do mnie zgłosić po pomoc ze zdjęciem?</h1>
-            </div>
-        
-            <div class="opis_banner">
-                <h2>
-                    Po pomoc możesz do mnie napisać na:<br />
-                    dogepeisiophotoshopper@gmail.com
-                </h2>
-            </div>
+    <div class="messageSend">
+        <div class="title">
+            <h1>Komentarz</h1>
         </div>
+
+        <div class="boxes">
+            <span>Nazwa: </span><input placeholder="Nazwa" id="name" required type="email"><br />
+            <span>Email: </span><input placeholder="Email" id="email" required type="email"><br />
+            <span id="YourMessage" style="position: absolute;">Twój Komentarz:</span>
+            <textarea name="wiadomosc" id="wiadomosc" cols="50" rows="8" placeholder="Komentarz..."></textarea>
+            <br />
+            <button onclick="sendMessage()" id="btn" type="submit" onclick="sendMessage()">Skomentuj</button>
+        </div>
+    </div>
+
+    <p>
+        <ol id="scoreList">
+        </ol>
+    </p>  
+
     </section>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase.js"></script>
 
     <!--Loading screen na początku-->
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
+    
+
+
+
     
     <script type="text/javascript">
         window.addEventListener("scroll", function(){
@@ -162,9 +198,14 @@
         $(window).on("load",function(){
             $(".loader-wrapper").fadeOut("slow");
         });
+
+        //Autoscroll
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
     </script>
 
 </div>
-
 </body>
+<script src="app.js"></script>
 </html>

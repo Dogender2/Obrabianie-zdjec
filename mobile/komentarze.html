@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>O mnie | Dogepiesio</title>
+    <title>Kontakt | Dogepiesio</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
+    
     <link rel="icon" href="../images/icon.png">
 
     <!--Preview-->
@@ -19,9 +19,11 @@
     <meta property="og:url" content="https://dogender2.github.io/Obrabianie-zdjec/index.html">
     <meta property="og:title" content="Obróbka Zdjęć | Dogepiesio">
     <meta property="og:description" content="Strona internetowa dotycząca obróbek zdjęć w photoshopie">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/912769582610141254/912769644572581938/o_mnie_mobile.png">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/912769582610141254/912769645885415555/kontakt_mobile.png">
     <meta property=”og:locale” content=”pl_PL” />
     <meta property="og:site_name" content="Dogepiesio | Obróbka">
+
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
@@ -42,10 +44,42 @@
       </a>
     </div>
     
-    <div class="text123" style="padding-left:16px">
-        <h3>Mam 14 lat, potrafię Photoshopa i chcę pomagać osobom, które chcą coś zmienić na swoich zdjęciach całkowicie za darmo. Robię to ze względu na chęć zyskania wyzwania oraz ćwiczenia moich umiejętności. W sekcji kontakt możesz znaleźć kontakt do mnie.</h3>
-        <img class="zdjecia123" src="../images/preview.jpg">
+    
+
+
+
+    <div class="messageSend">
+        <div class="title">
+            <h1>Komentarz</h1>
+        </div>
+
+        <div class="boxes">
+            <span>Nazwa: </span><input placeholder="Nazwa" id="name" required type="email"><br />
+            <span>Email: </span><input placeholder="Email" id="email" required type="email"><br />
+            <span id="YourMessage" style="position: absolute;">Twój Komentarz:</span>
+            <textarea name="wiadomosc" id="wiadomosc" cols="50" rows="8" placeholder="Komentarz..."></textarea>
+            <br />
+            <button onclick="sendMessage()" id="btn" type="submit" onclick="sendMessage()">Skomentuj</button>
+        </div>
     </div>
+
+    <p>
+        <ol id="scoreList">
+        </ol>
+    </p>  
+
+    </section>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase.js"></script>
+
+
+
+
+
+
     
     <!-- End smartphone / tablet look -->
     </div>
@@ -68,7 +102,7 @@
 
     <script type="text/javascript">
         if ($(window).width() > 994) {
-            window.location = "../components/o_mnie.html";
+            window.location = "../components/komentarze.html";
         }
 
         //Load
@@ -76,6 +110,7 @@
             $(".loader-wrapper").fadeOut("slow");
         });
     </script>
+
 
   <script>
     var clicks = 0;
@@ -155,4 +190,5 @@
     }
   </script>
 </body>
+<script src="../components/app.js"></script>
 </html>
