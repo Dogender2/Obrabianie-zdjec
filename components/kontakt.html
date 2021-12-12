@@ -6,10 +6,16 @@
 
     <title>Obróbka Zdjęć | Dogepiesio</title>
 
+    <!--Css-->
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
+    <!--JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="../js/Niespodzianka.js"></script>
+    <script src="../js/header_autoscroll_Load.js"></script>
 
+    <!--Ikona-->
     <link rel="icon" href="../images/icon.png">
     
     <!--Preview-->
@@ -25,12 +31,14 @@
 <body>
     <div class="wrapper">
 
-
     <script type="text/javascript">
         if ($(window).width() < 994) {
             window.location = "../mobile/kontakt.html";
         }
     </script>
+
+
+
 
     <header>
         <a onclick="counter()" href="#" class="logo">Obróbka Dogepiesio</a>
@@ -45,85 +53,7 @@
         </ul>
     </header>
 
-    <script>
-        var clicks = 0;
-        
-        function counter(){
-            clicks += 1;
-            
-            if(clicks === 5)
-            {
-                $(".logo").text("AŁA!!! To boli.");
-            }
-
-            if(clicks === 10)
-            {
-                $(".logo").text("Nie bij!");
-            }
-
-            if(clicks === 15){
-                $(".logo").text("Musisz tak mocno klikać?");
-            }
-
-            if(clicks === 20){
-                $(".logo").text("Czyję się molestowany.");
-            }
-
-            if(clicks === 25){
-                $(".logo").text("Właściwie. Na co ty liczysz?");
-            }
-            
-            if(clicks === 30){
-                $(".logo").text("Jeszcze raz mnie klikniesz tooo...");
-            }
-            
-            if(clicks === 31){
-                $(".logo").text("Noo kurdeeee!!!");
-            }
-
-            if(clicks === 35){
-                $(".logo").text("Denerwujesz mnie.");
-            }
-
-            if(clicks === 40){
-                Ups();
-                $(".logo").text("Widzisz co zrobiłeś?");
-            }
-
-            if(clicks === 45){
-                Ups2();
-                $(".logo").text("Psuja :P");
-            }
-
-            if(clicks === 50){
-                location.reload();
-            }
-        }
-
-        function Ups(){
-            $(".wrapper").css("transform", "rotate(90deg)");
-            $(".wrapper").css("transform-origin", "bottom left");
-            $(".wrapper").css("position", "absolute");
-            $(".wrapper").css("top", "-100vw");
-            $(".wrapper").css("left", "0");
-            $(".wrapper").css("height", "100vw");
-            $(".wrapper").css("width", "100vh");
-            $(".wrapper").css("overflow", "auto");
-        }
-
-        function Ups2(){
-            $(".wrapper").css("transform", "rotate(180deg)");
-            $(".wrapper").css("height", "100vh");
-            $(".wrapper").css("width", "100vw");
-            $(".wrapper").css("position", "absolute");
-            
-            $(".wrapper").css("transform-origin", "top left");
-            $(".wrapper").css("top", "100%");
-            $(".wrapper").css("left", "100%");
-        }
-
-    </script>
-
+    
     <section class="banner">
         <br />
         <br />
@@ -147,23 +77,46 @@
         </div>
     </section>
 
+    <footer class="footer">
+        <div class="container_footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Informacje</h4>
+                    <ul>
+                        <li><a href="../index.html">Strona Główna</a></li>
+                        <li><a href="o_mnie.html">O mnie</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="komentarze.html">Komentarze</a></li>
+    
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Github</h4>
+                    <ul>
+                        <li><a href="https://github.com/Dogender2">Profil Github</a></li>
+                        <li><a href="https://github.com/Dogender2/Obrabianie-zdjec">Kod źródłowy</a></li>
+    
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Media Społecznościowe</h4>
+  	 			    <div class="social-links">
+  	 			    	<a href="https://www.instagram.com/pies_z_sluchawkami/"><i class="fab fa-instagram"></i></a>
+  	 			    	<a href="https://www.youtube.com/channel/UCRPJlSz95XwdiLkizVsfesA"><i class="fab fa-youtube"></i></a>
+  	 			    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
     <!--Loading screen na początku-->
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
-    
-    <script type="text/javascript">
-        window.addEventListener("scroll", function(){
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-
-        //Load
-        $(window).on("load",function(){
-            $(".loader-wrapper").fadeOut("slow");
-        });
-    </script>
-
 </div>
 
 </body>

@@ -6,10 +6,15 @@
 
     <title>Obróbka Zdjęć | Dogepiesio</title>
 
+    <!--CSS-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
+    <!--JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/js/header_autoscroll_Load.js"></script>
 
+    <!--Ikona-->
     <link rel="icon" href="images/icon.png">
 
     <!--Preview-->
@@ -23,10 +28,7 @@
 </head>
 
 <body>
-
-    
     <div class="wrapper">
-
 
     <script type="text/javascript">
         if ($(window).width() < 994) {
@@ -238,31 +240,47 @@
         </div>
     </div>
 
+    
+    <footer class="footer">
+        <div class="container_footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Informacje</h4>
+                    <ul>
+                        <li><a href="index.html">Strona Główna</a></li>
+                        <li><a href="components/o_mnie.html">O mnie</a></li>
+                        <li><a href="components/kontakt.html">Kontakt</a></li>
+                        <li><a href="components/komentarze.html">Komentarze</a></li>
+    
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Github</h4>
+                    <ul>
+                        <li><a href="https://github.com/Dogender2">Profil Github</a></li>
+                        <li><a href="https://github.com/Dogender2/Obrabianie-zdjec">Kod źródłowy</a></li>
+    
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Media Społecznościowe</h4>
+  	 			    <div class="social-links">
+  	 			    	<a href="https://www.instagram.com/pies_z_sluchawkami/"><i class="fab fa-instagram"></i></a>
+  	 			    	<a href="https://www.youtube.com/channel/UCRPJlSz95XwdiLkizVsfesA"><i class="fab fa-youtube"></i></a>
+  	 			    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
     <!--Loading screen na początku-->
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
-    
-    <script type="text/javascript">
-        window.addEventListener("scroll", function(){
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky1", window.scrollY > 1500);
-        })
-
-        //Load
-        $(window).on("load",function(){
-            $(".loader-wrapper").fadeOut("slow");
-        });
-
-        //Autoscroll
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        }
-    </script>
-
 
     </div>
 </body>
